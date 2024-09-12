@@ -1,17 +1,13 @@
-version: '3'
 services:
   verdaccio:
     image: verdaccio/verdaccio:latest
     container_name: verdaccio
-    restart: always
     ports:
       - "4873:4873"
     volumes:
-      - ./storage:/verdaccio/storage
-      - ./config:/verdaccio/conf
-    environment:
-      - VERDACCIO_LOG_LEVEL=info
-      - NODE_ENV=production
-
+      - ./conf:/verdaccio/conf
+      - storage:/verdaccio/storage
+      - plugins:/verdaccio/plugins
 volumes:
-  verdaccio_storage:
+  storage:
+  plugins:
