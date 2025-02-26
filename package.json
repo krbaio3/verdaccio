@@ -1,0 +1,13 @@
+{
+  "name": "verdaccio",
+  "version": "1.0.0",
+  "description": "Artifactory de componentes",
+  "main": "index.js",
+  "scripts": {
+    "docker": "docker-conpose up -d"
+  },
+  "author": "John Krbaio <krbaio3@gmail.com>",
+  "license": "ISC",
+  "keywords": [],
+  "private": true
+}

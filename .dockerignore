@@ -1,0 +1,8 @@
+# Ignore unnecessary files for Docker image build
+node_modules/
+npm-debug.log
+.dockerignore
+.git
+.gitignore
+.docker
+README.md
