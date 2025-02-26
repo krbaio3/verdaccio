@@ -70,8 +70,7 @@ uplinks:
   npmjs:
     url: https://registry.npmjs.org/
       # Configurar el proxy para las solicitudes salientes a NPM
-    http_proxy: http://proxysscc.bankinter.bk:8080/
-    https_proxy: http://proxysscc.bankinter.bk:8080/
+
 
 # Learn how to protect your packages
 # https://verdaccio.org/docs/protect-your-dependencies/
@@ -83,7 +82,6 @@ packages:
     unpublish: $authenticated
     proxy:
       none
-
   '@*/*':
     # scoped packages
     access: $all
@@ -177,8 +175,9 @@ server:
 #   ca: ./path/verdaccio-csr.pem
 
 # https://verdaccio.org/docs/configuration#proxy
-  http_proxy: http://proxysscc.bankinter.bk:8080/
-  https_proxy: http://proxysscc.bankinter.bk:8080/
+# http_proxy: http://something.local/
+# https_proxy: https://something.local/
+
 
 # https://verdaccio.org/docs/configuration#notifications
 # notify:

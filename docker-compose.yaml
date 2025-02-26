@@ -3,7 +3,7 @@ services:
     image: verdaccio/verdaccio:latest
     container_name: verdaccio
     ports:
-      - "0.0.0.0:4873:4873"
+      - "4873:4873"
     volumes:
       - ./conf:/verdaccio/conf
       - storage:/verdaccio/storage
