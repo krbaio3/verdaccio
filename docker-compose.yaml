@@ -11,7 +11,7 @@ services:
       - VERDACCIO_LOGS=/verdaccio/logs
     volumes:
       - /mnt/verdaccio-storage:/verdaccio/storage
-      - /opt/verdaccio/config:/verdaccio/conf
+      - /opt/verdaccio/conf:/verdaccio/conf
       - /opt/verdaccio/logs:/verdaccio/logs
       - /opt/verdaccio/plugins:/verdaccio/plugins
     networks:
