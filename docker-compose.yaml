@@ -1,0 +1,24 @@
+services:
+  verdaccio:
+    image: verdaccio/verdaccio
+    container_name: verdaccio
+    restart: always
+    ports:
+      - "0.0.0.0:4873:4873"
+    environment:
+      - VERDACCIO_PORT=4873
+      - VERDACCIO_STORAGE=/verdaccio/storage
+      - VERDACCIO_LOGS=/verdaccio/logs
+    volumes:
+      - /mnt/verdaccio-storage:/verdaccio/storage
+      - /opt/verdaccio/config:/verdaccio/conf
+      - /opt/verdaccio/logs:/verdaccio/logs
+      - /opt/verdaccio/plugins:/verdaccio/plugins
+    networks:
+      - verdaccio_net
+    user: "1000:1000"  # Evitar correr como root
+
+networks:
+  verdaccio_net:
+    driver: bridge
+
